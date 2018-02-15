@@ -16,8 +16,12 @@ display the winner-->
         <button><img id="paper"alt="paper"width="200"src="images/paper.jpeg"/></button>
         <button><img id="scissors"alt="scissors"height="200"src="images/scissors.png"/></button>
         
-        <div id="computer"></div>
-        <h2 id="Winner"></h2>
+        <ul>
+          <li></li>
+
+        </ul>
+        
+        
       </center>
 
       
@@ -29,6 +33,21 @@ display the winner-->
       crossorigin="anonymous"
     >
     </script>
+      
+    <script>
+      $('#rock').click(function() {
+        $('ul').append('<li>Rock</li>');
+      });
+      $('#paper').click(function() {
+        $('ul').append('<li>Paper</li>');
+      });
+      $('#scissors').click(function() {
+        $('ul').append('<li>Scissors</li>');
+      });
+    </script>
+    
+    
+    
 
   </body>
 

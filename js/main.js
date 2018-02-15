@@ -3,11 +3,11 @@ $(document).ready( function() {
   var computer;
   var result;
   var options = ['rock', 'paper', 'scissors'];
-  var userLabel = $('#user'); //this is in jquery
-  var computerLabel = document.getElementById('computer'); //this is in javascript, this references the HTML file where id="computer"
-  var winnerLabel = document.getElementById('winner');
-  var rockStats = document.getElementById('rockStats');
-  var paperStats = document.getElementById('paperStats');
+  var userLabel = $('#user'); 
+  var computerLabel = $('#computer'); 
+  var winnerLabel = $('#winner');
+  var rockStats = $('#rockStats');
+  var paperStats = $('#paperStats');
   var scissorStats = document.getElementById('scissorStats');
   var stats = {
     rock: 0,
@@ -18,10 +18,12 @@ $(document).ready( function() {
     scissorsWins: 0
   }
   
+  $('#computerChoice')(function() {
   function computerChoice() {
     var index = Math.floor(Math.random() * options.length)
     return options[index];
-  }
+  });
+
   
   function compare() {
     userIndex = options.indexOf(user);
